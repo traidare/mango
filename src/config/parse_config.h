@@ -931,6 +931,10 @@ uint32_t parse_mod(const char *mod_str) {
 				mod |= WLR_MODIFIER_MOD3;
 				match_success = true;
 			}
+			if (!strcmp(token, "altgr")) {
+				mod |= WLR_MODIFIER_MOD5;
+				match_success = true;
+			}
 			if (!strcmp(token, "none")) {
 				match_success = true;
 			}
