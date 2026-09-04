@@ -229,6 +229,8 @@ static cJSON *build_monitor_json(Monitor *m) {
 	cJSON_AddItemToObject(resp, "tag_num", cJSON_CreateNumber(config.tag_num));
 	cJSON_AddItemToObject(resp, "hide_clients",
 						  cJSON_CreateNumber(m->hide_clients));
+	cJSON_AddItemToObject(resp, "visible_client_count",
+						  cJSON_CreateNumber(m->visible_clients));
 	cJSON_AddItemToObject(resp, "tags", build_tags_json(m));
 	cJSON_AddItemToObject(resp, "active_tags", monitor_active_tags(m));
 	cJSON_AddItemToObject(resp, "active_client", monitor_active_client(m));
